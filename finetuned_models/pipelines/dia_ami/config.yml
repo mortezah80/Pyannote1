@@ -1,0 +1,17 @@
+freeze:
+  speech_turn_segmentation:
+    speech_activity_detection:
+      min_duration_off: 0.1
+      min_duration_on: 0.1
+      offset: 0.5651891285436
+      onset: 0.5751891285436
+      pad_offset: 0.0
+      pad_onset: 0.0
+pipeline:
+  name: libs.audio.pipeline.speaker_diarization.SpeakerDiarization
+  params:
+    embedding: /media/aibox/Mehdi-hard/workstation/vad_gpu_worker_sony-main_ours/external_apps/ai_unit/finetuned_models/models/emb/train/AMI.SpeakerDiarization.MixHeadset.train/weights/0135.pt
+    method: affinity_propagation
+    metric: cosine
+    sad_scores: /media/aibox/Mehdi-hard/workstation/vad_gpu_worker_sony-main_ours/external_apps/ai_unit/finetuned_models/models/sad/train/AMI.SpeakerDiarization.MixHeadset.train/weights/0499.pt
+    scd_scores: /media/aibox/Mehdi-hard/workstation/vad_gpu_worker_sony-main_ours/external_apps/ai_unit/finetuned_models/models/scd/train/AMI.SpeakerDiarization.MixHeadset.train/weights/0117.pt

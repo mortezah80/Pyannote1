@@ -1,0 +1,5 @@
+diarization_fscore: 0.1660735286739693
+epoch: 0
+params:
+  alpha: 0.2456482257562308
+  min_duration: 0.1

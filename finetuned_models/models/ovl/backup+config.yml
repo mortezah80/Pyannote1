@@ -1,0 +1,45 @@
+architecture:
+  name: libs.audio.models.PyanNet
+  params:
+    ff:
+      hidden_size:
+      - 128
+      - 128
+    rnn:
+      bidirectional: true
+      hidden_size: 128
+      num_layers: 2
+      unit: LSTM
+    sincnet:
+      activation: leaky_relu
+      dropout: 0.0
+      instance_normalize: true
+      kernel_size:
+      - 251
+      - 5
+      - 5
+      max_pool:
+      - 3
+      - 3
+      - 3
+      min_band_hz: 50
+      min_low_hz: 50
+      out_channels:
+      - 80
+      - 60
+      - 60
+      sample_rate: 16000
+      waveform_normalize: true
+feature_extraction:
+  name: RawAudio
+  params:
+    sample_rate: 16000
+scheduler:
+  name: ConstantScheduler
+  params:
+    learning_rate: 0.01
+task:
+  name: OverlapDetection
+  params:
+    batch_size: 64
+    duration: 2.0

@@ -1,0 +1,27 @@
+X:
+  dimension: 1
+task: chunk-wise representation learning
+y:
+  classes:
+  - 000_24_F.lab
+  - 001_27_F.lab
+  - 002_26_F.lab
+  - 004_24_M.lab
+  - 005_28_M.lab
+  - 006_25_M.lab
+  - 007_30_M.lab
+  - 008_33_M.lab
+  - 009_23_M.lab
+  - 010_24_M.lab
+  - 011_32_M.lab
+  - 012_26_F.lab
+  - 013_33_M.lab
+  - 014_28_M.lab
+  - 015_32_M.lab
+  - 016_26_F.lab
+  - 017_36_M.lab
+  - 018_32_F.lab
+  - 019_27_F.lab
+  - 020_35_M.lab
+  - 021_32_M.lab
+  - 022_29_F.lab

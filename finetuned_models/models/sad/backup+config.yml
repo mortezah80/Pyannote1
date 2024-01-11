@@ -1,0 +1,25 @@
+architecture:
+  name: pyannote.audio.models.PyanNet
+  params:
+    ff:
+      hidden_size:
+      - 128
+      - 128
+    rnn:
+      bidirectional: true
+      hidden_size: 128
+      num_layers: 2
+      unit: LSTM
+feature_extraction:
+  name: RawAudio
+  params:
+    sample_rate: 16000
+scheduler:
+  name: ConstantScheduler
+  params:
+    learning_rate: 0.01
+task:
+  name: SpeechActivityDetection
+  params:
+    batch_size: 8
+    duration: 2.0
